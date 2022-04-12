@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Local Bus Library", "Local Bus Library.csproj", "{D6A257DA-DE9B-43A6-9E6D-075F1F210D85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusPassGenerator", "..\BusPassGenerator\BusPassGenerator.csproj", "{541739AA-C175-420A-AA54-6EA29711DC5A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6A257DA-DE9B-43A6-9E6D-075F1F210D85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A257DA-DE9B-43A6-9E6D-075F1F210D85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A257DA-DE9B-43A6-9E6D-075F1F210D85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A257DA-DE9B-43A6-9E6D-075F1F210D85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{541739AA-C175-420A-AA54-6EA29711DC5A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{541739AA-C175-420A-AA54-6EA29711DC5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{541739AA-C175-420A-AA54-6EA29711DC5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{541739AA-C175-420A-AA54-6EA29711DC5A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B397A712-E50F-407B-AC8C-22167FE497AD}
+	EndGlobalSection
+EndGlobal
