@@ -1,0 +1,59 @@
+﻿@model List<LocalBussPassLibrary.Entities.PassDetails>
+
+<h1>Pass Created Passenger List</h1>
+
+<strong>Total pass We have is : </strong> @Model.Count
+<br />
+<table class="table table-primary">
+    <thead>
+        <tr>
+            
+            <th scope="col">Pass ID</th>
+            <th scope="col">Passenger ID</th>
+            <th scope="col">Passenger Name</th>
+            <th scope="col">Expiry Date of Pass</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var pass in Model)
+        {
+        <tr>
+            
+            <td>@pass.PassId</td>
+            <td>@pass.Passenger.PassengerId</td>
+            <td>@pass.Passenger.Name</td>
+            <td>@pass.ExpiryDate</td>
+
+        </tr>
+        }
+    </tbody>
+
+</table>
+
+    @*<table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var book in Model)
+                {
+                <tr>
+                    <td>
+                        <img src="~/Images/@book.CoverImage"
+                             width="150"
+                             height="150" />
+                    </td>
+                    <td>@book.Id</td>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td><a href="~/updatebook/@book.Id">Edit</a></td>
+                </tr>
+                }
+            </tbody>
+        </table>*@

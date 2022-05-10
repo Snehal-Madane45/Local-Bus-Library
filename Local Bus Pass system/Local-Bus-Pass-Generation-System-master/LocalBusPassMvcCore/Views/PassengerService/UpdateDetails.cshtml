@@ -1,0 +1,114 @@
+﻿@model LocalBussPassLibrary.Entities.Passenger
+<section class="vh-100" style="background-image: url('https://media.istockphoto.com/photos/chhatrapati-shivaji-picture-id667564382?k=20&m=667564382&s=612x612&w=0&h=CmUbMKkhjFdq09GWI6nrlmy-thQDmEF-EcY1djvyqFM='); background-repeat: no-repeat; background-position: center; background-size: cover; ">
+    <form action="/passengerservice/updatedetails" method="post">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-10 col-lg-10 col-xl-8">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            @if (ViewBag.Error != null)
+                            {
+                                <div class="alert alert-dark">@ViewBag.Error</div>
+                            }
+                            <h3 class="mb-5">Update Profile</h3>
+                            @if (ViewBag.IsValid != null)
+                            {
+                                <div class="alert alert-danger">Please correct the validation errors</div>
+                            }
+
+
+
+
+                            <div class="col-md-6 mb-4">
+                                <div class="form-outline mb-4">
+                                    @Html.TextBoxFor(m => m.PassengerId, new { @class = "form-control", @id = "email" })
+                                    <label class="form-label" for="email">Passenger ID</label>
+                                    @Html.ValidationMessageFor(m => m.PassengerId, String.Empty, new { @style = "color:red" })
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @id = "name" })
+                                        <label class="form-label" for="name">Full Name</label>
+                                        @Html.ValidationMessageFor(m => m.Name, String.Empty, new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        @Html.TextBoxFor(m => m.Age, new { @class = "form-control", @id = "age" })
+                                        <label class="form-label" for="age">Age</label>
+                                        @Html.ValidationMessageFor(m => m.Age, String.Empty, new { @style = "color:red" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @id = "email" })
+                                        <label class="form-label" for="email">Email</label>
+                                        @Html.ValidationMessageFor(m => m.Email, String.Empty, new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        @Html.TextBoxFor(m => m.AadharId, new { @class = "form-control", @id = "aadhar" })
+                                        <label class="form-label" for="aadhar">Aadhar Id</label>
+                                        @Html.ValidationMessageFor(m => m.AadharId, String.Empty, new { @style = "color:red" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        @Html.PasswordFor(m => m.Password, new { @class = "form-control", @id = "password" })
+                                        <label class="form-label" for="password">Password</label>
+                                        @Html.ValidationMessageFor(m => m.Password, String.Empty, new { @style = "color:red" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        @Html.TextBoxFor(m => m.MobileNo, new { @class = "form-control", @id = "mobile" })
+                                        <label class="form-label" for="mobile">Mobile Number</label>
+                                        @Html.ValidationMessageFor(m => m.MobileNo, String.Empty, new { @style = "color:red" })
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        <select name="gender" class="form-control">
+                                            <option value="">--Select Gender--</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                        @*@Html.TextBoxFor(m => m.Gender, new { @class = "form-control", @id = "gender" })*@
+                                        <label class="form-label" for="gender">Gender</label>
+                                        
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-4">
+                                    <div class="form-outline mb-4">
+                                        @Html.TextBoxFor(m => m.Address, new { @class = "form-control", @id = "address" })
+                                        <label class="form-label" for="address">Address</label>
+                                        @Html.ValidationMessageFor(m => m.Address, String.Empty, new { @style = "color:red" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                            <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

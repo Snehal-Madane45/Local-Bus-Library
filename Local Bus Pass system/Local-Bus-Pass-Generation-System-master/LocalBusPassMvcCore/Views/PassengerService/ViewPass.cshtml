@@ -1,0 +1,77 @@
+﻿@model LocalBussPassLibrary.Entities.PassDetails
+
+
+<section class="vh-100" style="background-image: url('https://media.istockphoto.com/photos/chhatrapati-shivaji-picture-id667564382?k=20&m=667564382&s=612x612&w=0&h=CmUbMKkhjFdq09GWI6nrlmy-thQDmEF-EcY1djvyqFM='); background-repeat: no-repeat; background-position: center; background-size: cover; ">
+    <form action="/" method="get">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+
+                            <h3 class="mb-5">Pass Details</h3>
+
+                            <div>
+                                @if (Model != null)
+                                {
+
+                    <div class="table-scroll">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Pass ID </th>
+                                    <td>@Model.PassId</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row"> Pass Type </th>
+                                    <td>@Model.PassType</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Pass Duration </th>
+                                    <td>@Model.PassDuration Days</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Issue Date </th>
+                                    <td>@Model.IssueDate</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Starting Date </th>
+                                    <td>@Model.StartingDate</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Expiry Date </th>
+                                    <td>@Model.ExpiryDate</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Amount </th>
+                                    <td>@Model.Amount</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Payment Mode </th>
+                                    <td>@Model.PaymentMode</td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">Payment Status </th>
+                                    <td>@Model.PaymentStatus</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>}
+                            </div>
+                            <div class="form-outline mb-4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32328.378
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalBusPassLibrary", "LocalBusPassLibrary\LocalBusPassLibrary.csproj", "{EF9CC206-A2A3-4363-A38C-B11DCE9F23E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Local Bus Pass Generation System", "Local Bus Pass Generation System\Local Bus Pass Generation System.csproj", "{7174E2F9-8BFE-4B6D-BD16-C13050C2AB0D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalBusPassWebApi", "LocalBusPassWebApi\LocalBusPassWebApi.csproj", "{D40DF42D-45D4-4163-ABDA-E0A09C8ECC72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LocalBusPassMvcCore", "LocalBusPassMvcCore\LocalBusPassMvcCore.csproj", "{3331D16A-DCA7-4984-BCE5-97782329E8A3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF9CC206-A2A3-4363-A38C-B11DCE9F23E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF9CC206-A2A3-4363-A38C-B11DCE9F23E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF9CC206-A2A3-4363-A38C-B11DCE9F23E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF9CC206-A2A3-4363-A38C-B11DCE9F23E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7174E2F9-8BFE-4B6D-BD16-C13050C2AB0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7174E2F9-8BFE-4B6D-BD16-C13050C2AB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7174E2F9-8BFE-4B6D-BD16-C13050C2AB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7174E2F9-8BFE-4B6D-BD16-C13050C2AB0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D40DF42D-45D4-4163-ABDA-E0A09C8ECC72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D40DF42D-45D4-4163-ABDA-E0A09C8ECC72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D40DF42D-45D4-4163-ABDA-E0A09C8ECC72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D40DF42D-45D4-4163-ABDA-E0A09C8ECC72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3331D16A-DCA7-4984-BCE5-97782329E8A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3331D16A-DCA7-4984-BCE5-97782329E8A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3331D16A-DCA7-4984-BCE5-97782329E8A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3331D16A-DCA7-4984-BCE5-97782329E8A3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2567F4BE-84B4-408D-B647-055C116D8977}
+	EndGlobalSection
+EndGlobal

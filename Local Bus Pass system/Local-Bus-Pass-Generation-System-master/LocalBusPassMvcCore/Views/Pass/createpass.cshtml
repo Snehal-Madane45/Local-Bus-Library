@@ -1,0 +1,158 @@
+﻿@model LocalBussPassLibrary.Entities.PassDetails
+| <a href="/logout">Logout</a>
+<section class="vh-100">
+    <form action="/pass/createpass" method="post">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-xl-9">
+
+                    <h1 class="text-Black mb-4" style="text-align:center">Create Your Pass</h1>
+
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body">
+                            <hr class="mx-n3">
+
+                            <div class="row align-items-center py-3">
+                                <div class="col-md-3 ps-5">
+
+                                    <h6 class="mb-0">Pass Type</h6>
+
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    @*<select class="form-control" id="Role" name="Role">
+                            <option value="">-select Pass Type-</option>
+                            <option value="AC Bus"> AC Bus</option>
+                            <option value="Non-AC Bus">Non-AC Bus</option>
+
+                        </select>*@
+                                    @{ List<SelectListItem> listItems = new List<SelectListItem>();
+                                        listItems.Add(new SelectListItem
+                                        {
+                                            Text = "AC Bus",
+                                            Value = "AC Bus"
+                                        });
+                                        listItems.Add(new SelectListItem
+                                        {
+                                            Text = "Non-AC Bus",
+                                            Value = "Non-AC Bus"
+                                           
+                                        }); }
+
+                                    @Html.DropDownListFor(d => d.PassType, listItems, "-- Select Bus Type --", new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <hr class="mx-n3">
+
+                            <div class="row align-items-center py-3">
+                                <div class="col-md-3 ps-5">
+
+                                    <h6 class="mb-0">Pass Duration</h6>
+
+                                </div>
+                                <div class="col-md-9 pe-5">
+
+                                    @{ List<SelectListItem> options = new List<SelectListItem>();
+                                        options.Add(new SelectListItem
+                                        {
+                                            Text = "30",
+                                            Value = "30"
+                                        });
+                                        options.Add(new SelectListItem
+                                        {
+                                            Text = "60",
+                                            Value = "60"
+                                          
+                                        });
+                                        options.Add(new SelectListItem
+                                        {
+                                            Text = "90",
+                                            Value = "90"
+                                            
+                                        });}
+
+                                    @Html.DropDownListFor(d => d.PassDuration, options, "-- Select Pass Duration --", new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                            <hr class="mx-n3">
+
+                            <div class="row align-items-center py-3">
+                                <div class="col-md-3 ps-5">
+
+                                    <h6 class="mb-0">Starting Date</h6>
+
+                                </div>
+                                <div class="col-md-9 pe-5">
+                                    <div class="form-group">
+
+                                        @Html.TextBoxFor(d => d.StartingDate, new { type = "date" })
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <hr class="mx-n3">
+
+                            <div class="row align-items-center py-3">
+                                <div class="col-md-3 ps-5">
+
+                                    <h6 class="mb-0">  Payment Mode</h6>
+
+                                </div>
+
+                                <div class="col-md-3 ps-5">
+
+                                    @{ List<SelectListItem> paymentMode = new List<SelectListItem>();
+                                        paymentMode.Add(new SelectListItem
+                                        {
+                                            Text = "Credit Card",
+                                            Value = "Credit Card"
+                                        });
+                                        paymentMode.Add(new SelectListItem
+                                        {
+                                            Text = "Debit Card",
+                                            Value = "Debit Card",
+                                            
+                                        });
+                                        paymentMode.Add(new SelectListItem
+                                        {
+                                            Text = "UPI",
+                                            Value = "UPI"
+                                            
+                                        });}
+
+                                    @Html.DropDownListFor(d => d.PaymentMode, paymentMode, "-- Select Payment Option --", new { @class = "form-control" })
+                                </div>
+
+                            </div>
+
+
+                            <hr class="mx-n3">
+
+                            <div class="row align-items-center py-3">
+                                <div class="col-md-3 ps-5">
+
+                                    <h6 class="mb-0">Payment Status</h6>
+
+                                </div>
+                                <div class="col-md-9 pe-5">
+
+                                    @Html.TextBoxFor(d => d.PaymentStatus)
+
+                                </div>
+                            </div>
+
+                            <hr class="mx-n3">
+
+                            <div class="px-5 py-4">
+                                <button type="submit" class="btn btn-primary btn-lg">Create pass</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</section>

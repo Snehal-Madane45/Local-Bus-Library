@@ -1,0 +1,78 @@
+﻿@model LocalBussPassLibrary.Entities.Passenger
+
+
+<section class="vh-100" style="background-image: url('https://media.istockphoto.com/photos/chhatrapati-shivaji-picture-id667564382?k=20&m=667564382&s=612x612&w=0&h=CmUbMKkhjFdq09GWI6nrlmy-thQDmEF-EcY1djvyqFM='); background-repeat: no-repeat; background-position: center; background-size: cover; ">
+    
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
+                            <form action="/" method="get">
+                                <h3 class="mb-5">Passenger Profile</h3>
+
+                                <div>
+                                    @if (Model != null)
+                                    {
+
+                        <div class="table-scroll">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Passenger ID </th>
+                                        <td>@Model.PassengerId</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row"> Name </th>
+                                        <td>@Model.Name</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Email </th>
+                                        <td>@Model.Email</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Address </th>
+                                        <td>@Model.Address</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Age </th>
+                                        <td>@Model.Age</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">Gender </th>
+                                        <td>@Model.Gender</td>
+                                    </tr>
+
+                                    <tr>
+                                        <th scope="row">AadharId </th>
+                                        <td>@Model.AadharId</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>}
+                                </div>
+                        
+                        </form>
+                        <br />
+                        <div class="btn-group shadow-0" role="group">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="location.href='/passengerservice/updatedetails'">Update</button>
+                        </div>
+
+                       
+                    </div>
+                        </div>
+    <div class="form-outline mb-4">
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    
+
+
+</section>

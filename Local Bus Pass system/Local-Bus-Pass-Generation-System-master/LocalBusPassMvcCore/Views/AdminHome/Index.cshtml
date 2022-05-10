@@ -1,0 +1,39 @@
+﻿@model LocalBussPassLibrary.Entities.PassDetails
+    |  <a href="/logout">Logout</a>
+<h1 style="text-align:center"> Well Come to Online Bus Pass System</h1>
+<section class="vh-100" style="background-image: url('https://media.istockphoto.com/photos/chhatrapati-shivaji-picture-id667564382?k=20&m=667564382&s=612x612&w=0&h=CmUbMKkhjFdq09GWI6nrlmy-thQDmEF-EcY1djvyqFM='); background-repeat: no-repeat; background-position: center; background-size: cover; ">
+    
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+
+                        @if (ViewBag.Error != null)
+                        {
+                            <div class="alert alert-dark">@ViewBag.Error</div>}
+
+                        <h3 class="mb-5">Welcome Admin!!!</h3>
+
+                        <div class="form-outline mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="location.href='/adminhome/getallpass'">Created Pass List</button>
+                        </div>
+                        <div class="form-outline mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="location.href='/adminhome/viewprofile'">View Passenger Profile</button>
+                        </div>
+
+                        <div class="form-outline mb-4">
+                            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="location.href='/adminhome/viewpass'">View Pass</button>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-primary btn-lg btn-block" type="submit" onclick="location.href='/adminhome/report'">Total Pass and Total Payment</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</section>

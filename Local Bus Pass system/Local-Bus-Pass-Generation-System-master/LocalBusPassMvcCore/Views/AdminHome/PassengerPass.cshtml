@@ -1,0 +1,86 @@
+﻿@model LocalBussPassLibrary.Entities.PassDetails
+    | <a href="/logout">Logout</a>
+<section class="vh-100" style="background-image: url('https://media.istockphoto.com/photos/chhatrapati-shivaji-picture-id667564382?k=20&m=667564382&s=612x612&w=0&h=CmUbMKkhjFdq09GWI6nrlmy-thQDmEF-EcY1djvyqFM='); background-repeat: no-repeat; background-position: center; background-size: cover; ">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                <div class="card shadow-2-strong" style="border-radius: 1rem;">
+                    <div class="card-body p-5 text-center">
+                        <div>
+                            <form action="/adminhome/viewpass" method="post">
+                                @if (ViewBag.Error != null)
+                                {
+                                    <div class="alert alert-dark">@ViewBag.Error</div>
+                                }
+                                <div class="form-outline mb-4">
+                                    <label for="Username" class="control-label">Enter Pass Id</label>
+                                    @Html.TextBoxFor(m => m.PassId, new { @class = "form-control form-control-lg" })
+                                </div>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Submit</button>
+                            </form>
+                        </div>
+                        <div>
+                            @if (Model != null)
+                            {
+                <h3 class="mb-5">Pass Details</h3>
+
+                                <div class="table-scroll">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">Pass ID </th>
+                                                <td>@Model.PassId</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row"> Pass Type </th>
+                                                <td>@Model.PassType</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Pass Duration </th>
+                                                <td>@Model.PassDuration</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Issue Date </th>
+                                                <td>@Model.IssueDate</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Starting Date </th>
+                                                <td>@Model.StartingDate</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Expiry Date </th>
+                                                <td>@Model.ExpiryDate</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Amount </th>
+                                                <td>@Model.Amount</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Payment Mode </th>
+                                                <td>@Model.PaymentMode</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Payment Status </th>
+                                                <td>@Model.PaymentStatus</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>}
+                        </div>
+                        <div class="form-outline mb-4">
+                            <a href="/adminhome">Return to Admin Home</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
